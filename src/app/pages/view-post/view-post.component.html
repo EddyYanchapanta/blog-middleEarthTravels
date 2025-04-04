@@ -1,1 +1,18 @@
 <p>view-post works!</p>
+<!-- <app-travel-card [travel]="travel"></app-travel-card> -->
+<div class="travel card-deck p-2">
+    <article class="card">
+        <figure class="card-img-top">
+            <img src="{{travel?.imagen}}" alt="" class="image-travel" />
+        </figure>
+        <div class="card-body">
+            <h3 class="card-title">{{travel?.titulo}}</h3>
+            <p class="card-text">{{travel?.texto}}</p>
+            <h5 class="card-subtitle text-muted">{{travel?.autor}}</h5>
+            <h6 class="card-text"><em>
+                    Posted: <span class="text-muted">{{ travel?.fecha | date }}</span> -
+                    <span class="text-primary">{{travel?.categoria?.titulo}}</span></em>
+            </h6>
+        </div>
+    </article>
+</div>

@@ -1,33 +1,33 @@
-import { Category } from '../interfaces/category.interface';
+import { ICategory } from '../interfaces/category.interface';
 import { Post } from '../interfaces/post.interface';
 
-export const categoria: Category[] = [
+export const categoria: ICategory[] = [
   {
     id: 1,
-    Titulo: 'Festival',
+    titulo: 'Festival',
   },
   {
     id: 2,
-    Titulo: 'Playa',
+    titulo: 'Playa',
   },
   {
     id: 3,
-    Titulo: 'Montaña',
+    titulo: 'Montaña',
   },
   {
     id: 4,
-    Titulo: 'Ciudad',
+    titulo: 'Ciudad',
   },
   {
     id: 5,
-    Titulo: 'Rural',
+    titulo: 'Rural',
   },
 ];
 
-export const post: Post[] = [
+export const posts: Post[] = [
   {
     id: 1,
-    Titulo: 'Bilbo Birthday',
+    titulo: 'Bilbo Baggins Birthday',
     texto:
       'La fiesta de despedida de Bilbo fue una gran celebración organizada por Bilbo Baggins en su 111.º cumpleaños en el Campo de Fiestas, el 22 de septiembre de TA 3001',
     autor: 'Frodo Baggins',
@@ -35,12 +35,12 @@ export const post: Post[] = [
     fecha: new Date('2023/10/01'),
     categoria: {
       id: 1,
-      Titulo: 'Festival',
+      titulo: 'Festival',
     },
   },
   {
     id: 2,
-    Titulo: 'Pelargir',
+    titulo: 'Pelargir',
     texto:
       'Es una gran ciudad portuaria de Gondor, en la región de Lebennin, ubicada en la confluencia del río Sirith con el Anduin, muy cerca de la desembocadura',
     autor: 'Imrahil',
@@ -49,12 +49,12 @@ export const post: Post[] = [
     fecha: new Date('2024-10-01'),
     categoria: {
       id: 2,
-      Titulo: 'Playa',
+      titulo: 'Playa',
     },
   },
   {
     id: 3,
-    Titulo: 'Erebor',
+    titulo: 'Erebor',
     texto:
       'Se trata de una elevación aislada situada al noreste de Rhovanion, que fue arrebatada por un dragón, llamado Smaug, al rey Thrór de los enanos.',
     autor: 'Bilbo Baggins',
@@ -63,12 +63,12 @@ export const post: Post[] = [
     fecha: new Date('2007-10-01'),
     categoria: {
       id: 3,
-      Titulo: 'Montaña',
+      titulo: 'Montaña',
     },
   },
   {
     id: 4,
-    Titulo: 'Valmar',
+    titulo: 'Valmar',
     texto:
       'Situada en las faldas de Taniquetil, y es donde los Vanyar y los Valar residen. Otras ciudades son Alqualondë, Tirion y Avallónë, los respectivos hogares de los Teleri y los Noldor.',
     autor: 'Galadriel',
@@ -77,12 +77,12 @@ export const post: Post[] = [
     fecha: new Date('1995-10-01'),
     categoria: {
       id: 4,
-      Titulo: 'Ciudad',
+      titulo: 'Ciudad',
     },
   },
   {
     id: 5,
-    Titulo: 'The Shire',
+    titulo: 'The Shire',
     texto:
       'Se encuentra, a su vez, dentro de la gran región de Eriador, donde anteriormente existió el reino de Arnor. Está poblada exclusivamente por hobbits, una raza emparentada con los hombres y caracterizada por su baja estatura.[',
     autor: 'Bilbo Baggins',
@@ -90,7 +90,7 @@ export const post: Post[] = [
     fecha: new Date('2015-10-01'),
     categoria: {
       id: 5,
-      Titulo: 'Rural',
+      titulo: 'Rural',
     },
   },
 ];

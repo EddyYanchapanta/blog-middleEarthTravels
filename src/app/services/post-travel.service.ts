@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { post } from '../db/posts.db';
+import { posts } from '../db/posts.db';
 import { Post } from '../interfaces/post.interface';
 
 @Injectable({
@@ -7,6 +7,10 @@ import { Post } from '../interfaces/post.interface';
 })
 export class PostTravelService {
   getAll(): Post[] {
-    return post;
+    return posts;
+  }
+
+  getById(id: number): Post | undefined {
+    return posts.find((post) => post.id == id);
   }
 }

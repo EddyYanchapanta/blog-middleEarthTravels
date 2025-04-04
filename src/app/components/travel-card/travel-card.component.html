@@ -1,0 +1,17 @@
+<div class="miTravel card-deck p-2">
+    <article class="card">
+        <figure class="card-img-top">
+            <img src="{{miTravel?.imagen}}" alt="" class="image-miTravel" />
+        </figure>
+        <div class="card-body">
+            <h3 class="card-title">{{miTravel?.titulo}}</h3>
+            <p class="card-text">{{miTravel?.texto}}</p>
+            <h5 class="card-subtitle text-muted">{{miTravel?.autor}}</h5>
+            <h6 class="card-text"><em>
+                    Posted: <span class="text-muted">{{ miTravel?.fecha | date }}</span> -
+                    <span class="text-primary">{{miTravel?.categoria?.titulo}}</span></em>
+            </h6>
+        </div>
+    </article>
+</div>
+<button class="btn btn-outline-primary" [routerLink]="['/post',miTravel?.id]">Ver: {{miTravel?.titulo}}</button>

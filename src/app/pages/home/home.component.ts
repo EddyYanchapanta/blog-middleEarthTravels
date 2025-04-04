@@ -1,17 +1,18 @@
 import { PostTravelService } from './../../services/post-travel.service';
 import { Component, inject } from '@angular/core';
 import { Post } from '../../interfaces/post.interface';
-import { Category } from '../../interfaces/category.interface';
+import { ICategory } from '../../interfaces/category.interface';
+import { TravelCardComponent } from '../../components/travel-card/travel-card.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [TravelCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
   arrTravels: Post[] = [];
-  categorias: Category[] = [];
+  categorias: ICategory[] = [];
 
   PostTravelService = inject(PostTravelService);
 
@@ -19,12 +20,12 @@ export class HomeComponent {
     this.arrTravels = this.PostTravelService.getAll();
   }
 
-  formatFecha(fechaOriginal: string | number | Date) {
-    const fecha = new Date(fechaOriginal);
-    return fecha.toLocaleDateString('es-ES', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric',
-    });
-  }
+  // formatFecha(fechaOriginal: string | number | Date) {
+  //   const fecha = new Date(fechaOriginal);
+  //   return fecha.toLocaleDateString('es-ES', {
+  //     day: '2-digit',
+  //     month: 'short',
+  //     year: 'numeric',
+  //   });
+  // }
 }

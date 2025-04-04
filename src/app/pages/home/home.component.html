@@ -9,25 +9,8 @@
 </div> -->
 <div class="row">
     <div class="travels g-2 col-12 col-md-6 col-lg-4">
-
         @for (travel of arrTravels; track travel.id) {
-        <div class="travel card-deck p-2">
-            <article class="card">
-                <figure class="card-img-top">
-                    <img src="{{travel.imagen}}" alt="" class="image-travel" />
-                </figure>
-                <div class="card-body">
-                    <h3 class="card-title">{{travel.Titulo}}</h3>
-                    <p class="card-text">{{travel.texto}}</p>
-                    <h5 class="card-subtitle text-muted">{{travel.autor}}</h5>
-                    <h6 class="card-text"><em>
-                            Posted: <span class="text-muted">{{ formatFecha(travel.fecha) }}</span> -
-                            <span class="text-primary">{{travel.categoria}}</span></em>
-                    </h6>
-                </div>
-            </article>
-        </div>
-        <button class="btn btn-outline-primary">Ver: {{travel.Titulo}}</button>
+        <app-travel-card [miTravel]="travel"></app-travel-card>
         }
     </div>
 </div>
