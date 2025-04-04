@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { post } from '../db/posts.db';
+import { Post } from '../interfaces/post.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PostTravelService {
-
-  constructor() { }
+  getAll(): Post[] {
+    return post;
+  }
 }
