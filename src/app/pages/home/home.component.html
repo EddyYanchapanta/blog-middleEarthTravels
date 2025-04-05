@@ -1,12 +1,15 @@
 <p>home works!</p>
-<!-- <div>
-    <select (change)="onChange($event)">
+<div>
+    <!-- <select (change)="onChange($event)">
         <option value="">Selecciona un género</option>
         @for(genero of generos; track $index){
         <option [value]="genero">{{genero}}</option>
         }
-    </select>
-</div> -->
+    </select> -->
+    <div>
+        <button class="btn btn-danger" [routerLink]="['/new']">New Post</button>
+    </div>
+</div>
 <div class="row">
     <div class="travels g-2 col-12 col-md-6 col-lg-4">
         @for (travel of arrTravels; track travel.id) {

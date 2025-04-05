@@ -1,4 +1,5 @@
 <p>view-post works!</p>
+<button class="btn btn-outline-primary" [routerLink]="['/home']">Back to Home</button>
 <!-- <app-travel-card [travel]="travel"></app-travel-card> -->
 <div class="travel card-deck p-2">
     <article class="card">
@@ -8,10 +9,12 @@
         <div class="card-body">
             <h3 class="card-title">{{travel?.titulo}}</h3>
             <p class="card-text">{{travel?.texto}}</p>
-            <h5 class="card-subtitle text-muted">{{travel?.autor}}</h5>
+            <h5 class="card-subtitle text-muted">Author: {{travel?.autor}}</h5>
             <h6 class="card-text"><em>
-                    Posted: <span class="text-muted">{{ travel?.fecha | date }}</span> -
-                    <span class="text-primary">{{travel?.categoria?.titulo}}</span></em>
+                    Posted: <span class="text-muted">{{ travel?.fecha | date }}</span> </em>
+                <hr>
+                <span class="text-primary"><span class="text-muted">Category:</span> {{travel?.categoria?.titulo}}
+                </span>
             </h6>
         </div>
     </article>

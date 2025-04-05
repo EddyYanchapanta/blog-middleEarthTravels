@@ -3,10 +3,11 @@ import { Component, inject } from '@angular/core';
 import { Post } from '../../interfaces/post.interface';
 import { ICategory } from '../../interfaces/category.interface';
 import { TravelCardComponent } from '../../components/travel-card/travel-card.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [TravelCardComponent],
+  imports: [TravelCardComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

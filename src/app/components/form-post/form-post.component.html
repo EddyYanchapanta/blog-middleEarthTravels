@@ -1,0 +1,32 @@
+<p>form-post works!</p>
+<div>
+    <form [formGroup]="formPost" (ngSubmit)="onSubmit()" class="container my-3">
+        <div class="my-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" id="title" formControlName="titulo" placeholder="introduce title" class="form-control">
+        </div>
+        <div class="my-3">
+            <label for="description" class="form-label">Description:</label>
+            <input type="text" id="description" formControlName="texto" placeholder="introduce description paragraph"
+                class="form-control">
+        </div>
+        <div class="my-3">
+            <label for="author" class="form-label">Author:</label>
+            <input type="text" id="author" formControlName="autor" placeholder="introduce post author"
+                class="form-control">
+        </div>
+        <div class="my-3">
+            <label for="image" class="form-label">URL Image:</label>
+            <input type="text" id="image" formControlName="imagen" placeholder="introduce url image"
+                class="form-control">
+        </div>
+        <div class="my-3">
+            <label for="category" class="form-label">Category:</label>
+            <input type="text" id="category" formControlName="categoria.titulo" placeholder="select category:"
+                class="form-control">
+        </div>
+        <div>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+    </form>
+</div>

@@ -13,4 +13,8 @@ export class PostTravelService {
   getById(id: number): Post | undefined {
     return posts.find((post) => post.id == id);
   }
+
+  insert(post: Post): void {
+    posts.push(post);
+  }
 }

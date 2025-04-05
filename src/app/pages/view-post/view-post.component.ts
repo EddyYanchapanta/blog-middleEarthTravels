@@ -2,10 +2,11 @@ import { Component, inject, Input } from '@angular/core';
 import { PostTravelService } from '../../services/post-travel.service';
 import { Post } from '../../interfaces/post.interface';
 import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-view-post',
-  imports: [DatePipe],
+  imports: [DatePipe, RouterLink],
   templateUrl: './view-post.component.html',
   styleUrl: './view-post.component.css',
 })
