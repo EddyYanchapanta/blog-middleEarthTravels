@@ -1,11 +1,11 @@
 <p>home works!</p>
 <div>
-    <!-- <select (change)="onChange($event)">
-        <option value="">Selecciona un género</option>
-        @for(genero of generos; track $index){
-        <option [value]="genero">{{genero}}</option>
+    <select (change)="onChange($event)">
+        <option value="">All Categories</option>
+        @for (categoria of categorias; track categoria.id) {
+        <option [value]="categoria.titulo">{{categoria.titulo}}</option>
         }
-    </select> -->
+    </select>
     <div>
         <button class="btn btn-danger" [routerLink]="['/new']">New Post</button>
     </div>

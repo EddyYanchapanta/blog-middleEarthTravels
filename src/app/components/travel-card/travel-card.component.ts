@@ -16,8 +16,4 @@ export class TravelCardComponent {
   ngOnInit() {
     console.log(this.miTravel);
   }
-  /* categoria: ICategory = {
-    id: 0,
-    titulo: '',
-  }; */
 }

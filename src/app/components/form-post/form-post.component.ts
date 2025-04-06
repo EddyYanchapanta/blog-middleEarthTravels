@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { PostTravelService } from '../../services/post-travel.service';
+import { ICategory } from '../../interfaces/category.interface';
 
 @Component({
   selector: 'app-form-post',
@@ -10,8 +11,9 @@ import { PostTravelService } from '../../services/post-travel.service';
 })
 export class FormPostComponent {
   formPost: FormGroup;
-  travelService = inject(PostTravelService);
-  /* id: number | undefined; */
+  postTravelService = inject(PostTravelService);
+  categorias: ICategory[] = [];
+  categoriaSeleccionada: ICategory | undefined;
 
   constructor() {
     this.formPost = new FormGroup({
@@ -19,25 +21,44 @@ export class FormPostComponent {
       titulo: new FormControl('', []),
       texto: new FormControl('', []),
       autor: new FormControl('', []),
-      categoria: new FormGroup({
-        titulo: new FormControl('', []),
-      }),
+      categoria: new FormControl('', []),
       imagen: new FormControl('', []),
       fecha: new FormControl('', []),
     });
   }
 
+  ngOnInit() {
+    this.categorias = this.postTravelService.getAllCategories();
+  }
+
   onSubmit() {
     console.log(this.formPost.value);
-    const posts = this.travelService.getAll();
-    // Encontrar el ID más alto en el array existente
+    const posts = this.postTravelService.getAll();
+    // find the max id from the posts array
     const maxId =
       posts.length > 0 ? Math.max(...posts.map((post) => post.id)) : 0;
+    //asing the new id to the formPost value(max +1)
 
-    // Asignar el nuevo ID (máximo + 1)
-    this.formPost.value.id = maxId + 1;
-    this.travelService.insert(this.formPost.value);
-    // Reiniciar el formulario después de enviar
+    // mapping object form to object post
+    // this.travelService.insert(this.formPost.value);
+    this.postTravelService.insert({
+      //clone object
+      ...this.formPost.value,
+      id: maxId + 1,
+      fecha: new Date(),
+      // asing the selected category to the post
+      categoria: this.categoriaSeleccionada,
+    });
+    // reset the form
     this.formPost.reset();
+  }
+
+  onChange(event: Event): void {
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    console.log('Selected value:', selectedValue);
+    // search the selected category
+    this.categoriaSeleccionada = this.categorias.find(
+      (cat) => cat.titulo === selectedValue
+    );
   }
 }

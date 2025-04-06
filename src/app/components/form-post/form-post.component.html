@@ -22,8 +22,12 @@
         </div>
         <div class="my-3">
             <label for="category" class="form-label">Category:</label>
-            <input type="text" id="category" formControlName="categoria.titulo" placeholder="select category:"
-                class="form-control">
+            <select (change)="onChange($event)" formControlName="categoria">
+                <option value="">Select a category</option>
+                @for (categoria of categorias; track categoria.id) {
+                <option [value]="categoria.titulo">{{categoria.titulo}}</option>
+                }
+            </select>
         </div>
         <div>
             <input type="submit" class="btn btn-primary" value="Submit">
