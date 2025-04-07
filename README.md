@@ -1,5 +1,8 @@
 # MiddleEarthTravels
 
+Description: Blog Vintage about travels around Tolkien locations. 
+The site allows you to create your own posts, search by title and categories. To create a post, you must fill out a form with validators correctly before posting.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
 ## Development server
