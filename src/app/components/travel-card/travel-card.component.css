@@ -1,3 +1,18 @@
 .image-miTravel {
   width: 100%;
 }
+* {
+  border-color: var(--primary-color);
+}
+
+.btn {
+  color: var(--primary-color);
+  margin: 0.3rem;
+  transition: 0.1s;
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  font-weight: bolder;
+}

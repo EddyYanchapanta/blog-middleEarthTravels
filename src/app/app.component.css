@@ -1,0 +1,15 @@
+header {
+  border-radius: 5px;
+
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    rgb(213, 213, 22),
+    var(--primary-color)
+  );
+}
+h1 {
+  font-style: oblique;
+  font-weight: bolder;
+  font-variant: unset;
+}

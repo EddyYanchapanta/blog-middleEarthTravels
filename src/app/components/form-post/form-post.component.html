@@ -1,24 +1,41 @@
-<p>form-post works!</p>
 <div>
     <form [formGroup]="formPost" (ngSubmit)="onSubmit()" class="container my-3">
         <div class="my-3">
             <label for="title" class="form-label">Title:</label>
             <input type="text" id="title" formControlName="titulo" placeholder="introduce title" class="form-control">
+            @if (checkError('titulo', 'required')) {
+            <small>This field is required</small>
+            }
+            @if (checkError('titulo', 'minlength')) {
+            <small>Minimun 3 characters required</small>
+            }
         </div>
         <div class="my-3">
             <label for="description" class="form-label">Description:</label>
             <input type="text" id="description" formControlName="texto" placeholder="introduce description paragraph"
                 class="form-control">
+            @if (checkError('texto', 'required')) {
+            <small>This field is required</small>
+            }
         </div>
         <div class="my-3">
             <label for="author" class="form-label">Author:</label>
             <input type="text" id="author" formControlName="autor" placeholder="introduce post author"
                 class="form-control">
+            @if (checkError('autor', 'required')) {
+            <small>Author name is required</small>
+            }
         </div>
         <div class="my-3">
             <label for="image" class="form-label">URL Image:</label>
             <input type="text" id="image" formControlName="imagen" placeholder="introduce url image"
                 class="form-control">
+            @if (checkError('imagen', 'required')) {
+            <small>This field is required</small>
+            }
+            @if (checkError('imagen', 'pattern')) {
+            <small>Please, introduce a URL with extension .png .jpg .jpeg .gif .svg</small>
+            }
         </div>
         <div class="my-3">
             <label for="category" class="form-label">Category:</label>
@@ -28,6 +45,9 @@
                 <option [value]="categoria.titulo">{{categoria.titulo}}</option>
                 }
             </select>
+            @if (checkError('categoria', 'required')) {
+            <small>Please, select a category</small>
+            }
         </div>
         <div>
             <input type="submit" class="btn btn-primary" value="Submit">

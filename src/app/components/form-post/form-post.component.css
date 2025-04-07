@@ -1,0 +1,39 @@
+* {
+  small {
+    color: tomato;
+  }
+}
+
+.btn {
+  color: var(--primary-color);
+  margin: 0.3rem;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  font-weight: bolder;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  font-weight: bolder;
+}
+
+select {
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  &:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+  }
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+.image-miTravel {
+  width: 100%;
+}

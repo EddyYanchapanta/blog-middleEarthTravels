@@ -1,3 +1,55 @@
-.image-travel {
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
   width: 100%;
+
+  input {
+    cursor: pointer;
+  }
+  span {
+    color: var(--primary-color);
+    padding: 1%;
+  }
+}
+.form.control {
+}
+.input-group div:first-child {
+  flex-grow: 1;
+}
+.filter-categories {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.miTravel button {
+  align-items: right;
+}
+
+select {
+  margin-left: 2rem;
+  padding: 0.6%;
+  border-radius: 5px;
+  border: 1px solid rgb(191, 187, 187);
+  background-color: rgb(240, 236, 225);
+  color: white;
+  margin: 3rem;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+  }
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+select {
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
 }
