@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { PostTravelService } from '../../services/post-travel.service';
 import { ICategory } from '../../interfaces/category.interface';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-form-post',
@@ -64,6 +65,12 @@ export class FormPostComponent {
       });
       // reset the form
       this.formPost.reset();
+      // show succes alert
+      Swal.fire({
+        title: 'Post Upload!',
+        icon: 'success',
+        confirmButtonText: 'ok',
+      });
     }
   }
 

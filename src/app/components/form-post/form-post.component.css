@@ -3,7 +3,9 @@
     color: tomato;
   }
 }
-
+form {
+  width: 80%;
+}
 .btn {
   color: var(--primary-color);
   margin: 0.3rem;

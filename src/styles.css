@@ -2,3 +2,6 @@
 :root {
   --primary-color: #b09025df;
 }
+* {
+  font-family: Garamond, serif;
+}

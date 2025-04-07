@@ -1,5 +1,5 @@
 <div>
-    <form [formGroup]="formPost" (ngSubmit)="onSubmit()" class="container my-3">
+    <form [formGroup]="formPost" (ngSubmit)="onSubmit()" class="container ">
         <div class="my-3">
             <label for="title" class="form-label">Title:</label>
             <input type="text" id="title" formControlName="titulo" placeholder="introduce title" class="form-control">
@@ -50,7 +50,7 @@
             }
         </div>
         <div>
-            <input type="submit" class="btn btn-primary" value="Submit">
+            <input type="submit" class="btn btn-primary mb-5" value="Submit">
         </div>
     </form>
 </div>

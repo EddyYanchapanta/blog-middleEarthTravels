@@ -14,8 +14,11 @@
     padding: 1%;
   }
 }
-.form.control {
+
+.container {
+  text-align: center;
 }
+
 .input-group div:first-child {
   flex-grow: 1;
 }
@@ -26,9 +29,21 @@
 }
 
 .miTravel button {
-  align-items: right;
+  justify-content: flex-end;
 }
-
+input {
+  margin-left: 2rem;
+  padding: 0.6%;
+  border-radius: 5px;
+  border: 1px solid rgb(191, 187, 187);
+  background-color: rgb(240, 236, 225);
+  color: white;
+  margin: 3rem;
+  &:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+  }
+}
 select {
   margin-left: 2rem;
   padding: 0.6%;

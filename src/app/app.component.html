@@ -1,10 +1,23 @@
-<div class="m-3 card p-3 content">
-  <header class="text-center">
-    <figure><img src="../../public/images/middle-logo.jpg" alt="middle icon"></figure>
-    <h1>Blog Arda Travels</h1>
-  </header>
-  <hr>
-  <main>
-    <router-outlet />
-  </main>
-</div>
+<header class=" bg-dark text-light p-3">
+  <figure class="logo">
+    <img class="img-fluid"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Unico_Anello.png/1183px-Unico_Anello.png"
+      alt="middle icon">
+
+  </figure>
+  <h1 id="title">Blog Arda Travels</h1>
+</header>
+<main>
+  <div class="container hero">
+    <div class=" content">
+      <router-outlet />
+    </div>
+  </div>
+</main>
+<footer>
+  <p> &copy;Tolkien State rigths reserved. Web site designed by Ergo Proxy </p>
+  <i class="fa-brands fa-github"> <a href="https://github.com/EddyYanchapanta/blog-middleEarthTravels"> Eddy
+      Yanchapanta</a></i>
+
+
+</footer>

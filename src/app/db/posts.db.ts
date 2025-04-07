@@ -93,4 +93,46 @@ export const posts: Post[] = [
       titulo: 'Rural',
     },
   },
+  {
+    id: 6,
+    titulo: 'Coronación de Elessar',
+    texto:
+      'Tras la derrota de Sauron, Aragorn fue coronado como el rey Elessar (un nombre quenya que Galadriel le dio, traducido como Piedra de Elfo), y se casó con Arwen poco después. Se convirtió en el vigésimo sexto rey de Arnor, trigésimo quinto rey de Gondor y el primer gran rey del Reino Unificado de Gondor y Arnor.',
+    autor: 'Frodo Baggins',
+    imagen:
+      'https://prod.assets.earlygamecdn.com/images/What-Happened-To-Each-Member-Of-The-Fellowship-After-The-Lord-of-the-Rings-Aragorn-Coronation.PNG',
+    fecha: new Date('2014-10-01'),
+    categoria: {
+      id: 1,
+      titulo: 'Festival',
+    },
+  },
+  {
+    id: 7,
+    titulo: 'Losgar',
+    texto:
+      'Situada al noroeste de la Tierra Media, entre las Ered Lómin, el estuario del Drengist y el Belegaer. Los vientos agrestes de Ered Lómin, de las más lejanas Ered Engrin y de Helcaraxë mantenían a Lammoth sin precipitaciones y tan yermo y sin vegetación ni otro tipo de vida que sus barrancos y acantilados producían eco de puro vacíos.',
+    autor: 'Maedhros',
+    imagen:
+      'https://tolkiengateway.net/w/images/thumb/9/9b/Ted_Nasmith_-_The_Burning_of_the_Ships.jpg/375px-Ted_Nasmith_-_The_Burning_of_the_Ships.jpg',
+    fecha: new Date('2009-10-01'),
+    categoria: {
+      id: 2,
+      titulo: 'Playa',
+    },
+  },
+  {
+    id: 8,
+    titulo: 'Gondolin',
+    texto:
+      'Ciudad secreta de los noldor de la Primera Edad fundada por Turgon, el segundo hijo de Fingolfin, en las montañas Circundantes, al norte de Beleriand. Se calcula que llegó a tener una población de cuarenta mil habitantes, deducida de la hueste de diez mil elfos enviados a la Nírnaeth Arnoediad.',
+    autor: 'Thorondor',
+    imagen:
+      'https://vignette.wikia.nocookie.net/tolkien/images/9/9d/Gondolin_by_spartank42.jpg/revision/latest?cb=20180716135444&path-prefix=it',
+    fecha: new Date('1998-11-01'),
+    categoria: {
+      id: 4,
+      titulo: 'Ciudad',
+    },
+  },
 ];

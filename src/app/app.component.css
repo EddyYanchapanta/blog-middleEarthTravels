@@ -1,6 +1,14 @@
+#title {
+  font-family: "Lucida Handwriting", cursive;
+  margin: 0;
+  padding: 0 1rem;
+  text-shadow: 1px 1px 2px var(--primary-color);
+}
 header {
   border-radius: 5px;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: initial;
   background: linear-gradient(
     to right,
     var(--primary-color),
@@ -8,8 +16,47 @@ header {
     var(--primary-color)
   );
 }
-h1 {
-  font-style: oblique;
-  font-weight: bolder;
-  font-variant: unset;
+
+footer {
+  position: static;
+  bottom: 0;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    rgb(213, 213, 22),
+    var(--primary-color)
+  );
+  border-radius: 5px;
+  img {
+    width: 5px;
+  }
+  a {
+    color: rgb(45, 36, 14);
+    text-decoration: none;
+  }
+}
+
+.logo {
+  max-width: 50px;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1600px;
+}
+.hero {
+  background-image: url(../assets/images/tolk.logo.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(244, 228, 190);
+  background-blend-mode: multiply;
+}
+main {
+  background-color: rgb(245, 242, 229);
 }

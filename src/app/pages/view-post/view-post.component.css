@@ -16,3 +16,12 @@ img {
   width: 100%;
   height: auto;
 }
+@media (width > 950px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
